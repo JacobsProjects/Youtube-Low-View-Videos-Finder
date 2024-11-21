@@ -1,0 +1,224 @@
+
+body {
+    background-image:
+    linear-gradient(
+      to right, 
+      rgb(3, 71, 139), 
+      rgb(16, 121, 226),
+      rgb(50, 137, 225)
+    );
+    background-color: rgb(3, 71, 139);
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    color: rgb(88, 157, 248);
+    font-weight: bolder;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  ::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(88, 157, 248); 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(3, 71, 139); 
+    border-radius: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(4, 103, 202); 
+  }
+  
+.container {
+   /* background: rgb(2, 37, 72);*/
+    background-image:
+    linear-gradient(
+      to right, 
+      rgb(2, 37, 72), 
+      rgb(9, 71, 132)
+    );
+    padding: 20px;
+    border-radius: 19px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    box-sizing: border-box;
+   /* background-color: #0056b3; */
+   background-image:
+   linear-gradient(
+     to right, 
+     #0056b3, 
+     #0072eb
+   );
+    color: rgb(88, 157, 248);
+    
+}
+::placeholder {
+    color: rgb(158, 184, 255);
+    opacity: 1; 
+  }
+  
+  ::-ms-input-placeholder {
+    color: rgb(158, 184, 255);
+  }
+  
+button {
+    background-image:
+    linear-gradient(
+      to right, 
+      #0056b3, 
+      #0072eb
+    );
+    color: rgb(88, 157, 248);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #0072eb;
+}
+
+button:disabled {
+    background: #cccccc;
+}
+.error {
+    color: #dc3545;
+    margin-top: 10px;
+    text-align: center;
+}
+.info {
+    color: #0056b3;
+    margin-top: 10px;
+}
+.video-container {
+    margin-top: 20px;
+}
+.video-info {
+    margin-bottom: 10px;
+}
+.loading {
+    display: none; 
+    text-align: center;
+    margin-top: 10px;
+}
+iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+/*drop down section*/
+ 
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+.dropdown-btn {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    box-sizing: border-box;
+  /*  background-color: #0056b3;*/
+  background-image:
+  linear-gradient(
+    to right, 
+    #0056b3,
+    #0072eb
+  );
+    color: rgb(88, 157, 248);
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    transition: border-radius 0.3s ease;
+}
+
+.dropdown-btn::after {
+    content: '\0025BC';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn.active {
+    border-radius: 14px 14px 0 0;
+}
+input:focus {
+  outline: none;
+}
+
+.dropdown-btn.active::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-content {
+    position: absolute;
+    width: 100%;
+  /*  background-color: #0056b3; */
+  background-image:
+  linear-gradient(
+    to right, 
+    #0056b3,
+    #0072eb
+  );
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    max-height: 0;
+    overflow-y: scroll;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 
+        max-height 0.3s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    z-index: 9;
+}
+
+.dropdown-content.show {
+    max-height: 300px;
+    opacity: 1;
+    transform: scaleY(1);
+    border-top: none;
+}
+
+
+.dropdown-content label {
+    display: block;
+    padding: 8px;
+    color: rgb(88, 157, 248);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content label:hover {
+    background-color: rgba(88, 157, 248, 0.2);
+}

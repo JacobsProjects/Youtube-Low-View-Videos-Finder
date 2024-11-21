@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">YouTube Low View Videos Finder</h1>
+        
+        <div class="form-group">
+            <label for="apiKey">YouTube API Key:</label>
+            <input type="password" id="apiKey" placeholder="Enter your YouTube API key">
+        </div>
+        
+        <div class="form-group">
+            <label for="viewCount">Maximum Views:</label>
+            <input type="number" id="viewCount" value="1000" placeholder="Enter maximum view count">
+        </div>
+
+        <div class="form-group">
+            <label for="searchTerms">Search Terms (optional):</label>
+            <input type="text" id="searchTerms" placeholder="Leave blank for completely random videos">
+        </div>
+        
+        <div class="form-group">
+            <div class="dropdown">
+                <label for="dropdown">Select Regions:</label>
+                <div class="dropdown-btn" id="selectedRegions">Select Regions</div>
+                <div class="dropdown-content" id="regionSelection">
+                    <button id="checkAllBtn" type="button">Check All</button>
+                    <label><input type="checkbox" value="US" checked> United States</label>
+                    <label><input type="checkbox" value="CA" checked> Canada</label>
+                    <label><input type="checkbox" value="GB"> United Kingdom</label>
+                    <label><input type="checkbox" value="AU"> Australia</label>
+                    <label><input type="checkbox" value="FR"> France</label>
+                    <label><input type="checkbox" value="DE"> Germany</label>
+                    <label><input type="checkbox" value="JP"> Japan</label>
+                    <label><input type="checkbox" value="IN"> India</label>
+                    <label><input type="checkbox" value="BR"> Brazil</label>
+                    <label><input type="checkbox" value="RU"> Russia</label>
+                    <label><input type="checkbox" value="KR"> South Korea</label>
+                    <label><input type="checkbox" value="MX"> Mexico</label>
+                    <label><input type="checkbox" value="ES"> Spain</label>
+                    <label><input type="checkbox" value="IT"> Italy</label>
+                    <label><input type="checkbox" value="NL"> Netherlands</label>
+                    <label><input type="checkbox" value="PL"> Poland</label>
+                    <label><input type="checkbox" value="TR"> Turkey</label>
+                    <label><input type="checkbox" value="SA"> Saudi Arabia</label>
+                    <label><input type="checkbox" value="SE"> Sweden</label>
+                    <label><input type="checkbox" value="CH"> Switzerland</label>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <label for="searchAttempts">Number of Search Attempts:</label>
+            <input type="number" id="searchAttempts" value="5" min="1" max="10" placeholder="Number of search attempts">
+        </div>
+        
+        <button onclick="searchVideo()" id="searchButton">Find Video</button>
+        
+        <div id="loading" class="loading">Searching for videos...</div>
+        <div id="info" class="info"></div>
+        <div id="error" class="error"></div>
+        <div id="videoContainer" class="video-container"></div>
+    </div>
+
+    <script src="falling-background.js"></script>
+    <script>
+        window.onload = function() {
+            const fallingBackground = new FallingBackground({
+                imageSrc: 'imgs/partical.png', 
+                numberOfImages: 30,                   
+                imageSize: 50,                       
+                minDuration: 4,                      
+                maxDuration: 7,                       
+                opacity: 0.2,                         
+                rotate: true                          
+            });
+        };
+    </script>
+
+    <script src="script.js">
+    </script>
+    <script src="dropdown.js"></script>
+</body>
+</html>
