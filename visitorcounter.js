@@ -1,17 +1,13 @@
+    const namespace = 'noviewvideolookup-site';
+    
+    async function updateVisitorCount() {
+        try {
+            const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/visits`);
+            const data = await response.json();
+            document.getElementById('visitorCount').textContent = data.value;
+        } catch (error) {
+            console.error('Error updating visitor count:', error);
+        }
+    }
 
-function updateVisitorCount() {
-    fetch('counter.php')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('visitorCount').textContent = data.count;
-        })
-        .catch(error => console.error('Error:', error));
-}
-function updateVisitorCount() {
-    let count = localStorage.getItem('visitorCount');
-    if (!count) count = 0;
-    count = parseInt(count) + 1;
-    localStorage.setItem('visitorCount', count);
-    document.getElementById('visitorCount').textContent = count;
-}
-updateVisitorCount();
+    updateVisitorCount();
