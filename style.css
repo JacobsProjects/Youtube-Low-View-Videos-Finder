@@ -77,6 +77,11 @@ html {
     padding: 20px;
     border-radius: 19px;
     box-shadow: 0 2px 4px rgb(88, 157, 248);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgb(88, 157, 248);
 }
 .form-group {
     margin-bottom: 15px;
@@ -269,4 +274,15 @@ input:focus {
 
 .dropdown-content label:hover {
     background-color: rgba(88, 157, 248, 0.2);
+}
+#jagob-link {
+  color: rgb(88, 157, 248);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#jagob-link:hover {
+  color: rgb(158, 184, 255);
+  text-decoration: underline;
 }

@@ -36,6 +36,12 @@ async function searchVideo() {
         errorDiv.textContent = 'Please select at least one region';
         return;
     }
+    if (selectedRegions.length > 20) {
+        errorDiv.textContent = 'Please select fewer regions 🤞';
+        return;
+    }
+
+    
 
     errorDiv.textContent = '';
     infoDiv.textContent = '';
@@ -146,6 +152,7 @@ function generateRandomString() {
     }
     return result;
 }
+
 
 function getRandomItem(array) {
     return array[Math.floor(Math.random() * array.length)];
