@@ -62,15 +62,20 @@
                 </div>
             </div>
         </div>
-
         
-
         <div class="form-group">
             <label for="searchAttempts">Number of Search Attempts:</label>
             <input type="number" id="searchAttempts" value="5" min="1" max="10" placeholder="Number of search attempts">
         </div>
         
         <button onclick="searchVideo()" id="searchButton">Find Video</button>
+        <div class="help">
+            <div class="help">
+                <button class="help-btn" onclick="window.open('https://youtu.be/WzAAq2aEki4', '_blank')">
+                    <span>?</span>
+                </button>
+            </div>
+        </div>
         
         <div id="loading" class="loading">Searching for videos...</div>
         <div id="info" class="info"></div>
@@ -84,8 +89,8 @@
         
     </div>
     </div>
-    
-    <script src="falling-background.js"></script>
+
+        <script src="falling-background.js"></script>
     <script>
         window.onload = function() {
             const fallingBackground = new FallingBackground({
